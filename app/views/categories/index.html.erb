@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div class="row">
+        <% @categories.each do |category| %>   
+            <div class="card mx-5" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><%= category.name %></h5>
+                    <p><%= category.id %></p>
+                    <%= link_to "Show",category_path(category), class:"btn btn-warning"  %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

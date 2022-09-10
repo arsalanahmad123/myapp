@@ -1,0 +1,37 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#product-image{
+    height: 200px;
+    width: auto;
+}
+
+#marginTop{
+    margin-bottom: 50px;
+}
+
+.back-image{
+    background-image: url("header.svg");
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 350px;
+    border: 1px solid dotted orangered;
+    border-top-left-radius: 180px;
+    // border-bottom-left-radius: 180px;
+    // border-top-right-radius: 180px;
+    border-bottom-right-radius: 180px;
+}
+
+#header-style{
+    margin-top: 80px;
+}
+
+#show_img{
+    height: 60vh;
+    width: 700px;
+    margin: auto;
+}

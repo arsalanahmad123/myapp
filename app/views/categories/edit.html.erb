@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row d-flex justify-content-center m-0">
+        <h1 class="text-center">Edit Existing Category</h1>
+        <div class="col-md-6 ">
+         <%= form_for @category do |f| %>
+
+            <div class="form-group">
+                <%= f.label :name %>
+                <%= f.text_field :name, autocomplete: 'name', class: 'form-control' %>
+            </div>
+
+            <div class="form-group mt-3 text-center">
+                <%= f.submit class: 'btn btn-primary' %>
+            </div>
+            <% end %>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row">
+        <% @products.each do |product| %>   
+            <div class="card mx-5" style="width: 18rem;">
+                <%= link_to product_path(product) do %>
+                <%= image_tag product.image.url, class:"card-img-top" %> 
+                <% end %>
+                <div class="card-body">
+                    <h5 class="card-title"><%= product.name %></h5>
+                    <p class="card-text"><%= product.description %></p>
+                    <p class="card-text"> Rs.<%= product.price %></p>
+                    <% if product.categories.any? %>
+                    <p class="card-text">Cargories:  <%= render product.categories %></p>
+                    <% end %>
+                    <%= link_to "Show",product_path(product), class:"btn btn-warning"  %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

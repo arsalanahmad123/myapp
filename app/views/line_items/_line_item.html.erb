@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+                  <div>
+                    <p class="mb-1">Shopping cart</p>
+                    <p class="mb-0">You have <%= line_item.quantity  %> items in your cart</p>
+                  </div>
+
+</div>
+
+<div class="card mb-3">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center">
+                        <div>
+                            <%= image_tag (line_item.product.image.url), class:"img-fluid rounded-3 image-setting" %> 
+                        </div>
+                        <div class="ms-3">
+                          <h5><%= line_item.product.name %> </h5>
+                          <p class="small mb-0"><%= line_item.product.description %></p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row align-items-center">
+                        <div style="width: 50px;">
+                          <p class="fw-normal mb-0"><%= line_item.quantity %></p>
+                        </div>
+                        <div style="width: 80px;">
+                          <h5 class="mb-0"><%= line_item.product.price %></h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>

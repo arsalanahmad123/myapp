@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+    before_action :require_admin,only: [:new,:create,:edit,:update]
 
     def index
         @categories  = Category.all
@@ -6,6 +7,7 @@ class CategoriesController < ApplicationController
 
     def show
         @category = Category.find(params[:id])
+        @products = @category.products
     end
 
     def new
@@ -47,6 +49,13 @@ class CategoriesController < ApplicationController
             params.require(:category).permit(:name)
         end
 
+        def require_admin
+            if current_user.admin == true
+            else
+                flash[:alert] = "Only admins can perform this action"
+                redirect_to root_path
+            end
+        end
 
 
 end

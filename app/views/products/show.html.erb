@@ -1,13 +1,33 @@
-<div class="container mt-5 text-center">
-<div class="row">
-<div class="card">
-  <%= image_tag @product.image.url, id:"show_img" %> 
-  <div class="card-body">
-    <h5 class="card-title"><%= @product.name %></h5>
-    <p class="card-text"><%= @product.description %></p>
-    <%= link_to "Edit Product", edit_product_path(@product), class:"btn btn-primary" %>
-    <%= link_to "Delete Product", product_path(@product),method: :delete ,class:"btn btn-danger" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 shadow-lg p-5  rounded mt-5">
+      <div class="row">
+        <div class="text-end mb-3">
+          <%= link_to "Add to Cart", line_items_path(product_id: @product.id),class:"btn btn-warning" %>
+        </div>
+       <%= image_tag @product.image.url, id:"show_img" %>
+       </div>
+       <div class="row">
+       <h5 class="ms-2 mt-3"><%= @product.name %></h5>
+        <p class="ms-2">Description:  <%= @product.description %></p>
+        <p class="ms-2">Price: <%= @product.price %></p>
+      </div>
+      <div class="text-center">
+        <% if current_user.admin? %>
+        <%= link_to "Edit Product", edit_product_path(@product), class:"btn btn-primary " %>
+        <%= link_to "Delete Product", product_path(@product),data:{method: :delete, confirm: "Do you really want to delete the category?"} ,class:"btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-3 offset-md-2 shadow-lg p-2  rounded mt-5">
+        <ul class="list-group">
+          <h2 class="text-center">Related Categories</h2>
+        <% @categories.each do |category| %>
+            <li class="list-group-item shadow-sm p-2 mb-3 text-white text-center rounded">
+              <h5> <%= link_to category.name, category_path(category) %></h5>
+            </li>
+          </ul>
+        <% end %>
+    </div>
   </div>
-</div>
-</div>
 </div>

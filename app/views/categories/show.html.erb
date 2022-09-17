@@ -1,12 +1,29 @@
-<div class="container mt-5 text-center">
-<div class="row">
-<div class="card">
-    <h1>Category</h1>
-  <div class="card-body">
-    <h5 class="card-title"><%= @category.name %></h5>
-    <%= link_to "Edit Product", edit_category_path(@category), class:"btn btn-primary" %>
-    <%= link_to "Delete Product", category_path(@category),data:{method: :delete, confirm: "Do you really want to delete the category?"} ,class:"btn btn-danger" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 shadow-lg p-2  rounded mt-5">
+       <h1>Category Name: </h1>
+          <h4 class="text-center mt-5"><%= @category.name %></h4>
+       <% if current_user.admin? %>
+       <div class="text-center mt-4">
+        <%= link_to "Edit Category", edit_category_path(@category), class:"btn btn-primary " %>
+        <%= link_to "Delete Category", category_path(@category),data:{method: :delete, confirm: "Do you really want to delete the category?"} ,class:"btn btn-danger" %>
+        <% end %>
+        </div>
+    </div>
+    <div class="col-md-3 offset-md-2 shadow-lg p-2 rounded mt-5">
+        <ul class="list-group">
+          <h2 class="text-center">Related Products</h2>
+              <% if !@category.products.exists? %>
+                <h5 class="text-center list-group-item shadow-sm p-2 mt-5 rounded">There are no products belonging to this category</h5>
+              <% else %>
+              <% @products.each do |product| %>
+            <li class="list-group-item shadow-sm p-2 mb-3 text-white text-center rounded">
+              <h5> <%= link_to product.name, product_path(product) %></h5>
+            </li>
+            <% end %>
+          </ul>
+        <% end %>
+    </div>
   </div>
-</div>
-</div>
+
 </div>

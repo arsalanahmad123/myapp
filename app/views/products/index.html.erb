@@ -1,7 +1,8 @@
 <div class="container mt-5">
     <div class="row">
+        <h1 class="text-center mb-5">ALL PRODUCTS</h1>
         <% @products.each do |product| %>   
-            <div class="card mx-5" style="width: 18rem;">
+            <div class="card mx-3" style="width: 18rem;">
                 <%= link_to product_path(product) do %>
                 <%= image_tag product.image.url, class:"card-img-top" %> 
                 <% end %>

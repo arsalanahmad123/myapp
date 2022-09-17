@@ -1,15 +1,59 @@
-<section  id="header">
+<section class="mt-5">
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <h1>Enriching your mind with beautiful thoughts</h1>
+            <div class="col-md-6 mt-5">
+                <h1 class="mt-5 line-height">Enriching your mind with <span class="text-design"> beautiful thoughts </span> </h1>
+                <%= link_to "Buy Now", products_path, class:"btn btn-secondary" %>
             </div>
-            <div class="col-md-6 back-image">
-                <h1 class="position-absolute text-center" id="header-style">Welcome to Peace Developers</h1>
+            <div class="col-md-6">
+                <%=  image_tag "banner.jpg",class:"banner-img" %>
+            </div>
+        </div>
+        <div class="row mt-4" id="position-styling">
+            <div class="col-md-5 shadow-sm p-3 mb-5 bg-body rounded text-center">
+                <div class=" shadow-lg p-2 mb-3 background rounded" >
+                    <div id="icon-style" class="hover-style">
+                        <i class="fa fa-tag"></i>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="lorem">Tag</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p>
+                </div>
+            </div>
+            <div class="col-md-5 shadow-sm p-3 mb-5 bg-body rounded text-center offset-md-2">
+                <div class=" shadow-lg p-2 mb-3 background rounded">
+                <div id="icon-style" class="hover-style">
+                <i class="fa fa-tag"></i>
+                </div>
+                </div>
+                <div>
+                    <h1 class="lorem">Tag</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 shadow-lg p-3 mb-5 m-auto bg-body rounded text-center">
+                <%= image_tag "5.jpg", id:"mid-image" %>
             </div>
         </div>
     </div>
+        <div id="position-relative">
+        <svg id="wave position-relative" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(66.28, 202.888, 221.266, 1)" offset="0%"></stop><stop stop-color="rgba(189.391, 61.009, 139.517, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,441L60,400.2C120,359,240,278,360,245C480,212,600,229,720,269.5C840,310,960,376,1080,334.8C1200,294,1320,147,1440,130.7C1560,114,1680,229,1800,285.8C1920,343,2040,343,2160,294C2280,245,2400,147,2520,130.7C2640,114,2760,180,2880,236.8C3000,294,3120,343,3240,367.5C3360,392,3480,392,3600,392C3720,392,3840,392,3960,375.7C4080,359,4200,327,4320,318.5C4440,310,4560,327,4680,334.8C4800,343,4920,343,5040,285.8C5160,229,5280,114,5400,106.2C5520,98,5640,196,5760,269.5C5880,343,6000,392,6120,375.7C6240,359,6360,278,6480,269.5C6600,261,6720,327,6840,334.8C6960,343,7080,294,7200,228.7C7320,163,7440,82,7560,57.2C7680,33,7800,65,7920,89.8C8040,114,8160,131,8280,130.7C8400,131,8520,114,8580,106.2L8640,98L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(62, 243, 203.141, 1)" offset="0%"></stop><stop stop-color="rgba(11, 255, 209.534, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,245L60,228.7C120,212,240,180,360,196C480,212,600,278,720,326.7C840,376,960,408,1080,383.8C1200,359,1320,278,1440,228.7C1560,180,1680,163,1800,130.7C1920,98,2040,49,2160,32.7C2280,16,2400,33,2520,81.7C2640,131,2760,212,2880,236.8C3000,261,3120,229,3240,196C3360,163,3480,131,3600,163.3C3720,196,3840,294,3960,294C4080,294,4200,196,4320,163.3C4440,131,4560,163,4680,171.5C4800,180,4920,163,5040,130.7C5160,98,5280,49,5400,24.5C5520,0,5640,0,5760,57.2C5880,114,6000,229,6120,253.2C6240,278,6360,212,6480,212.3C6600,212,6720,278,6840,326.7C6960,376,7080,408,7200,367.5C7320,327,7440,212,7560,204.2C7680,196,7800,294,7920,334.8C8040,376,8160,359,8280,302.2C8400,245,8520,147,8580,98L8640,49L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z"></path></svg>
+        </div>
+</section>
 
-
+<section class="about shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="container">
+        <div class="row">
+                <h1 class="text-center mt-5">Categories</h1>
+                <% @categories.each do |category| %>
+            <div class="col-md-4 shadow p-3  mt-5 bg-body rounded offset-sm-1">
+                <h3><%= link_to category.name,category_path(category) %></h3>
+            </div>
+            <% end %>
+        </div>  
+    </div>
 </section>

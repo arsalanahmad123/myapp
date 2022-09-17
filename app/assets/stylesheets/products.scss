@@ -2,36 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#product-image{
+#product-image {
     height: 200px;
     width: auto;
 }
 
-#marginTop{
+#marginTop {
     margin-bottom: 50px;
 }
 
-.back-image{
-    background-image: url("header.svg");
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 350px;
-    border: 1px solid dotted orangered;
-    border-top-left-radius: 180px;
-    // border-bottom-left-radius: 180px;
-    // border-top-right-radius: 180px;
-    border-bottom-right-radius: 180px;
-}
-
-#header-style{
-    margin-top: 80px;
-}
-
-#show_img{
+#show_img {
     height: 60vh;
     width: 700px;
     margin: auto;
+}
+
+.image-setting {
+
+    width: 100px;
+}
+
+.banner-img {
+    height: 400px;
+    width: 500px;
+}
+
+.text-design {
+    color: orangered;
+    padding-top: 20px;
+}
+
+.line-height {
+    line-height: 70px;
+}
+
+#position-styling {
+    position: absolute;
+    top: 120%;
+    z-index: 1;
+}
+
+#position-relative {
+    position: static;
+    margin-top: 100px;
+}
+
+#icon-style {
+    background-color: antiquewhite;
+    padding: 5px;
+    height: 60px;
+    width: 50px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+
+.hover-style {
+    transition: transform .7s ease-in-out;
+}
+
+.hover-style:hover {
+    transform: rotate(360deg);
+}
+
+.about {
+    height: 100vh;
+}
+
+.background {
+    background-color: #8b76ac;
+}
+
+#mid-image {
+    height: 200px;
+    width: 200px;
+}
+
+.card-img-top {
+    height: 120px;
+    padding-top: 10px;
+}
+
+.fa-cart-shopping {
+    color: white;
 }

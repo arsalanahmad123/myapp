@@ -1,13 +1,12 @@
 <div class="container mt-5">
-    <div class="row">
-        <% @categories.each do |category| %>   
-            <div class="card mx-5" style="width: 18rem;">
-                <div class="card-body">
+    <div class="row"> 
+            <div class="col-md-10 shadow-lg p-5 rounded m-auto">
+                <% @categories.each do |category| %> 
+                <div class="col-md-4 mb-3 text-center shadow-sm p-3 rounded m-auto">
                     <h5 class="card-title"><%= category.name %></h5>
-                    <p><%= category.id %></p>
-                    <%= link_to "Show",category_path(category), class:"btn btn-warning"  %>
+                    <%= link_to "Show",category_path(category), class:"btn btn-warning mt-2"  %>
                 </div>
-            </div>
-        <% end %>
+                 <% end %>
+            </div> 
     </div>
 </div>
